@@ -9,8 +9,9 @@ app.use(
     extended: true,
   })
 );
+app.disable("x-powered-by");
 
-router.get("/", async function (req, res, next){
+router.get("/", async function (_req, res, _next){
   res.json({ 'message': 'Full Cycle Rocks!' })
 });
 
